@@ -1,5 +1,14 @@
 # MySQL Workbench & MySQL with docker-compose
 
+## Run MySQL Workbench & MySQL with docker-compose
+```shell
+docker-compose -f workbench.docker-compose.yaml up
+docker-compose -f workbench.docker-compose.yaml down
+```
+-- In the connection settings, `Hostname` should be `db-mysql`  
+as the service is named on the [workbench.docker-compose.yaml](workbench.docker-compose.yaml#L18) file
+
+## Run MySQL with docker-compose
 ```shell
 docker-compose up
 docker exec -it db-mysql bash
@@ -16,10 +25,6 @@ docker exec -it db-mysql bash
         );
 
         insert into employees (id, name) values (1, 'George');
-        insert into employees (id, name) values (2, 'Georgio'), (3, 'Nick');
+        insert into employees (id, name) values (2, 'Georgio'), (3, 'Nick');  
 
-```shell
-docker-compose -f workbench.docker-compose.yaml up
-docker-compose -f workbench.docker-compose.yaml down
-```
--- In the connection settings, `Hostname` should be `db-mysql` as the service is named on the [workbench.docker-compose.yaml](workbench.docker-compose.yaml#L18) file
+
