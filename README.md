@@ -29,4 +29,20 @@ docker exec -it db-mysql bash
         insert into employees (id, name) values (1, 'George');
         insert into employees (id, name) values (2, 'Georgio'), (3, 'Nick');  
 
+# Extract MySql table to .csv with Python
 
+```shell
+python3 -m virtualenv env
+source env/bin/activate
+python3 -m pip install -r requirements.txt
+```
+
+Create a file named `pipeline.conf`:
+```
+[mysql_config]  
+hostname = localhost  
+port = 3306  
+username = root  
+database = mydatabase  
+password = root
+```

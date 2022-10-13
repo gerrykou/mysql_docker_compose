@@ -1,1 +1,4 @@
-data/
+*.conf
+*.csv
+/env
+/data
