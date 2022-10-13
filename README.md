@@ -8,6 +8,8 @@ docker-compose -f workbench.docker-compose.yaml down
 -- In the connection settings, `Hostname` should be `db-mysql`  
 as the service is named on the [workbench.docker-compose.yaml](workbench.docker-compose.yaml#L18) file
 
+To Access MySQL Workbench go to http://localhost:3001/
+
 ## Run MySQL with docker-compose
 ```shell
 docker-compose up
